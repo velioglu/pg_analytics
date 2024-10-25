@@ -26,10 +26,6 @@ on:
       - "**/*.toml"
   workflow_dispatch:
 
-concurrency:
-  group: benchmark-pg_analytics-${{ github.head_ref || github.ref }}
-  cancel-in-progress: true
-
 jobs:
   benchmark-pg_analytics:
     name: Benchmark pg_analytics on ${{ matrix.name }}
